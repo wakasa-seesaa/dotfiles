@@ -1,9 +1,11 @@
 syntax on
+filetype indent on
 
 highlight Normal ctermbg=black ctermfg=grey
 highlight StatusLine term=none cterm=none ctermfg=black ctermbg=grey
 highlight CursorLine term=none cterm=none ctermfg=none ctermbg=darkgray
 
+set t_Co=256
 set backspace=start,eol,indent
 set whichwrap=b,s,[,],,~
 set mouse=a
@@ -26,34 +28,26 @@ set autoindent
 set expandtab
 set shiftwidth=4
 
-filetype off
-
-
-
-if has('vim_starting')
-    set nocompatible
-	" Required:
-	set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-        
-"Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-    NeoBundleFetch 'Shougo/neobundle.vim'
-          
-    NeoBundle 'Shougo/neosnippet.vim'
-    NeoBundle 'Shougo/neosnippet-snippets'
-    NeoBundle 'tpope/vim-fugitive'
-    NeoBundle 'kien/ctrlp.vim'
-    NeoBundle 'flazz/vim-colorschemes'
-	NeoBundle 'yko/mojo.vim'
-    NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
-
-    NeoBundle 'scrooloose/nerdtree'
-call neobundle#end()
-
-filetype plugin indent on
-              
-NeoBundleCheck
-
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
-runtime! userautoload/*.vim
+"#set t_Co=256
+"#set fenc=utf-8
+"#set nobackup
+"#set noswapfile
+"#set autoread
+"#set hidden
+"#set showcmd
+"#
+"#set number
+"#set smartindent
+"#set showmatch
+"#set laststatus=2
+"#set wildmenu wildmode=list:full
+"#
+"#set expandtab
+"#set tabstop=4
+"#set shiftwidth=4
+"#
+"#set ignorecase
+"#set smartcase
+"#set incsearch
+"#set wrapscan
+"#set hlsearch
